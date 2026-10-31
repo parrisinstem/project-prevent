@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pgremoval"
+version = "0.1.0"
+description = "How well do simple removal attacks undo PhotoGuard's protective perturbations?"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Parris Small" }]
+dependencies = [
+    "torch>=2.1",
+    "numpy",
+    "pillow",
+    "pandas",
+]
+
+[project.optional-dependencies]
+# Needed to run the real experiment (GPU, e.g. Google Colab).
+gpu = ["diffusers>=0.27", "transformers", "accelerate"]
+# Needed for the SSIM and LPIPS metrics you will implement.
+metrics = ["scikit-image", "lpips"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
