@@ -2,7 +2,7 @@
 
 **Question:** PhotoGuard adds an invisible perturbation to a photo so that diffusion-model edits of it come out broken. How much of that protection survives cheap transforms an adversary can apply first: JPEG compression, resizing, added noise and diffusion purification?
 
-This is a small empirical follow-up to a proposal I designed for Thorn (Goldman Sachs Analyst Impact Fund 2026): protecting photos at upload against manipulation by generative models. A prevention-only defence is only as good as its robustness to removal, so this project measures that directly.
+This is a small empirical follow-up to a proposal I designed for Thorn (Analyst Impact Fund 2026): protecting photos at upload against manipulation by generative models. A prevention-only defence is only as good as its robustness to removal, so this project measures that directly.
 
 ## Background
 
